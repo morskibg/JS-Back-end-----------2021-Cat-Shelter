@@ -24,7 +24,8 @@ const router = function (req, res){
                     || parsedPath.endsWith('.js') 
                     ? '/content' : parsedPath;                
        
-    handlerDispatcher_(route)(req, res);    
+    // handlerDispatcher_(route).apply(null, [req, res]);    
+    handlerDispatcher_(route)(req,res);  
 }
 
 const toExport = {

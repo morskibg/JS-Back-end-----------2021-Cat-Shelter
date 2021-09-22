@@ -96,7 +96,7 @@ class Cat{
             updatedCats.push(modifiedCat);    
         }else{
             const filePath = path.join(config.contentFolder, config.imageFolder, currCatinDb.image)
-            console.log('filePath: ', filePath);
+           
             fs.unlinkSync(filePath)
         }         
         fs.writeFile(Cat.dbFilePath,JSON.stringify(updatedCats),"utf-8", function(err){
